@@ -1,0 +1,579 @@
+/* ========================================
+   ESSENZA VERDA - COMPLETE STYLESHEET
+   Minimalist DTC Brand
+   ======================================== */
+
+/* ========================================
+   GLOBAL RESET & TYPOGRAPHY
+   ======================================== */
+
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: #111;
+    background: #fff;
+    line-height: 1.6;
+    font-size: 16px;
+    font-weight: 300;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  
+  h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  p {
+    margin-bottom: 1.5rem;
+    font-size: 1.125rem;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  a:hover {
+    opacity: 0.6;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* ========================================
+     HERO SECTION (Homepage)
+     ======================================== */
+  
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .hero-content {
+    position: absolute;
+    bottom: 15%;
+    left: 10%;
+    color: #fff;
+    max-width: 500px;
+    z-index: 2;
+  }
+  
+  .hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  }
+  
+  .hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.3);
+  }
+  
+  /* ========================================
+     CTA BUTTON (Global)
+     ======================================== */
+  
+  .cta,
+  button#subscribe {
+    display: inline-block;
+    padding: 14px 40px;
+    background: transparent;
+    border: 1px solid currentColor;
+    color: inherit;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .cta:hover,
+  button#subscribe:hover {
+    background: #111;
+    color: #fff;
+    border-color: #111;
+  }
+  
+  .hero-content .cta {
+    color: #fff;
+    border-color: #fff;
+  }
+  
+  .hero-content .cta:hover {
+    background: #fff;
+    color: #111;
+    border-color: #fff;
+  }
+  
+  /* ========================================
+     HERO BRIDGE (Homepage)
+     ======================================== */
+  
+  .hero-bridge {
+    width: 100%;
+    margin: 120px 0;
+  }
+  
+  .hero-bridge img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* ========================================
+     PHILOSOPHY SECTION (Homepage)
+     ======================================== */
+  
+  .philosophy {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    padding: 0 10%;
+    align-items: center;
+    margin-bottom: 120px;
+  }
+  
+  .philosophy-text {
+    max-width: 420px;
+  }
+  
+  .philosophy-image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* ========================================
+     PRODUCT PREVIEW (Homepage)
+     ======================================== */
+  
+  .product-preview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    padding: 0 10%;
+    align-items: center;
+    margin-bottom: 120px;
+  }
+  
+  .product-text {
+    max-width: 420px;
+  }
+  
+  .product-image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* ========================================
+     FOOTER (Global)
+     ======================================== */
+  
+  footer {
+    text-align: center;
+    padding: 80px 0;
+    font-size: 0.95rem;
+  }
+  
+  footer a {
+    border-bottom: 1px solid #111;
+    padding-bottom: 2px;
+  }
+  
+  /* ========================================
+     PRODUCT PAGE
+     ======================================== */
+  
+  #product-hero,
+  #product-bridge,
+  #product-what,
+  #product-feel,
+  #product-purchase {
+    text-align: center;
+    padding: 100px 10%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  #product-hero {
+    padding-top: 120px;
+  }
+  
+  #product-hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+  
+  #product-bridge {
+    padding: 60px 10%;
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+  
+  #product-what p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+  }
+  
+  /* Product Ingredients */
+  #product-ingredients {
+    text-align: left;
+    padding: 100px 10%;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  #product-ingredients ul {
+    list-style: none;
+  }
+  
+  #product-ingredients li {
+    font-size: 1.125rem;
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  
+  #product-ingredients li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+  }
+  
+  /* Product Feel */
+  #product-feel p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+  }
+  
+  /* Product Purchase */
+  #product-purchase {
+    padding: 120px 10% 150px;
+  }
+  
+  #product-purchase h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  #product-purchase p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  
+  #product-purchase button {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* ========================================
+     ABOUT PAGE
+     ======================================== */
+  
+  .about-hero {
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+  }
+  
+  .about-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .about-content {
+    text-align: center;
+    padding: 100px 10%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .about-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .about-content p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+  
+  /* ========================================
+     THANK YOU PAGE
+     ======================================== */
+  
+  #thank-you-hero,
+  #thank-you-message,
+  #thank-you-expect,
+  #thank-you-close {
+    text-align: center;
+    padding: 100px 10%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  #thank-you-hero {
+    padding-top: 120px;
+  }
+  
+  #thank-you-hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+  
+  #thank-you-message p,
+  #thank-you-expect p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+  
+  #thank-you-close {
+    padding-bottom: 150px;
+  }
+  
+  #thank-you-close p {
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  #return-home {
+    display: inline-block;
+    padding: 14px 40px;
+    border: 1px solid #111;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+  }
+  
+  #return-home:hover {
+    background: #111;
+    color: #fff;
+  }
+  
+  /* ========================================
+     FAQ PAGE
+     ======================================== */
+  
+  #faq-hero {
+    text-align: center;
+    padding: 120px 10% 80px;
+  }
+  
+  #faq-hero h1 {
+    font-size: 3.5rem;
+  }
+  
+  .faq-item {
+    padding: 60px 10%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .faq-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .faq-item p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+  }
+  
+  #faq-close {
+    text-align: center;
+    padding: 100px 10% 150px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  #faq-close p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+  }
+  
+  /* ========================================
+     HELP / SUPPORT PAGE
+     ======================================== */
+  
+  #support-hero {
+    text-align: center;
+    padding: 120px 10% 80px;
+  }
+  
+  #support-hero h1 {
+    font-size: 3.5rem;
+  }
+  
+  .support-item {
+    padding: 60px 10%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .support-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .support-item p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+  }
+  
+  .support-item a {
+    border-bottom: 1px solid #111;
+    padding-bottom: 2px;
+  }
+  
+  #support-close {
+    text-align: center;
+    padding: 100px 10% 150px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  #support-close p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+  }
+  
+  /* ========================================
+     MOBILE RESPONSIVE (max-width: 768px)
+     ======================================== */
+  
+  @media (max-width: 768px) {
+    
+    /* Typography Scaling */
+    h1 {
+      font-size: 2.5rem;
+    }
+    
+    h2 {
+      font-size: 2rem;
+    }
+    
+    h3 {
+      font-size: 1.25rem;
+    }
+    
+    p {
+      font-size: 1rem;
+    }
+    
+    /* Hero */
+    .hero-content {
+      left: 8%;
+      max-width: 90%;
+    }
+    
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+      font-size: 1rem;
+    }
+    
+    /* Philosophy & Product Preview */
+    .philosophy,
+    .product-preview {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      padding: 0 8%;
+    }
+    
+    .philosophy-text,
+    .product-text {
+      max-width: 100%;
+    }
+    
+    /* Product Page */
+    #product-hero h1 {
+      font-size: 2.5rem;
+    }
+    
+    #product-bridge,
+    #product-what p,
+    #product-feel p {
+      font-size: 1.125rem;
+    }
+    
+    #product-purchase h2 {
+      font-size: 2rem;
+    }
+    
+    /* About Page */
+    .about-content h1 {
+      font-size: 2.5rem;
+    }
+    
+    .about-content p {
+      font-size: 1.125rem;
+    }
+    
+    /* Thank You Page */
+    #thank-you-hero h1 {
+      font-size: 2.5rem;
+    }
+    
+    #thank-you-message p,
+    #thank-you-expect p,
+    #thank-you-close p {
+      font-size: 1.125rem;
+    }
+    
+    /* FAQ & Support */
+    #faq-hero h1,
+    #support-hero h1 {
+      font-size: 2.5rem;
+    }
+    
+    .faq-item,
+    .support-item {
+      padding: 40px 8%;
+    }
+    
+    #faq-close,
+    #support-close {
+      padding: 80px 8% 100px;
+    }
+  }
