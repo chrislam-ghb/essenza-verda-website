@@ -1,13 +1,13 @@
 /* ========================================
-   ESSENZA VERDA – 完美品牌视觉系统 (V2.0)
-   已锁定：石灰岩白背景 | 18vh 呼吸节奏 | 沉浸式影像
+   ESSENZA VERDA – 完美品牌视觉系统 (V2.1)
+   已锁定：直接路径引用 | 石灰岩白 | 沉浸式排版
 ======================================= */
 
 /* 1. 视觉系统变量 */
 :root {
-  --ev-bg: #F8F7F2;          /* 石灰岩白：温暖高级 */
-  --ev-text: #282828;        /* 深石墨：柔和阅读 */
-  --ev-accent: #A5C8D6;      /* 天空蓝：点睛之笔 */
+  --ev-bg: #F8F7F2;          /* 石灰岩白 */
+  --ev-text: #282828;        /* 深石墨 */
+  --ev-accent: #A5C8D6;      /* 天空蓝 */
 
   --ev-gap-section: 18vh;    /* 屏与屏的停顿感 */
   --ev-gap-paragraph: 7vh;   /* 段落间的呼吸感 */
@@ -71,6 +71,7 @@ p + p {
   align-items: flex-end;
   justify-content: flex-start;
   padding: 8vh 5vw;
+  /* 路径修正：直接引用根目录图片 */
   background: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.05)), 
               url('hero-bg.jpg') center/cover no-repeat;
   filter: var(--ev-filter);
@@ -100,7 +101,8 @@ p + p {
   margin: var(--ev-gap-section) 0;
   width: 100vw;
   height: 70vh;
-  background: url('hero-second.jpg') center/cover no-repeat;
+  /* 路径修正：对应 section-transition.jpg */
+  background: url('section-transition.jpg') center/cover no-repeat;
   filter: var(--ev-filter);
 }
 
@@ -115,6 +117,7 @@ p + p {
 .philosophy-image {
   width: 100%;
   height: 60vh;
+  /* 路径修正：对应 philosophy.jpg */
   background: url('philosophy.jpg') center/cover no-repeat;
   filter: var(--ev-filter);
 }
@@ -141,79 +144,5 @@ p + p {
   flex-direction: column;
   justify-content: center;
   padding: 12vh 5vw;
-  /* 重点：渐变叠加层确保文字清晰 */
+  /* 路径修正：对应 product-main.jpg */
   background: linear-gradient(135deg, rgba(248,247,242,0.8) 0%, transparent 60%),
-              url('product-main.jpg') center/cover no-repeat;
-}
-
-#product-ingredients li {
-  border-left: 2px solid var(--ev-accent);
-  padding: 1.2vh 0 1.2vh 2.5rem;
-  margin-bottom: 1vh;
-  list-style: none;
-}
-
-#product-purchase #subscribe {
-  border: 1.5px solid var(--ev-text);
-  padding: 1.2rem 3rem;
-  letter-spacing: 0.2em;
-  transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-#product-purchase #subscribe:hover {
-  background: var(--ev-text);
-  color: var(--ev-bg);
-}
-
-/* ========================================
-   ABOUT - 品牌溯源
-======================================= */
-
-.about-hero {
-  max-width: none;
-  width: 100vw;
-  height: 80vh;
-  background: url('about-hero.jpg') center/cover no-repeat;
-  filter: var(--ev-filter);
-}
-
-.about-content p:last-of-type {
-  font-style: italic;
-  font-family: "Playfair Display", serif;
-  font-size: 1.2rem;
-  margin-top: 10vh;
-  text-align: center;
-}
-
-/* ========================================
-   通用组件与响应式
-======================================= */
-
-.cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5em;
-  text-decoration: none;
-  color: var(--ev-text);
-  font-size: 0.85rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  padding-bottom: 4px;
-  border-bottom: 1px solid rgba(40, 40, 40, 0.2);
-}
-
-@media (max-width: 768px) {
-  section {
-    padding-top: 12vh;
-    padding-bottom: 12vh;
-  }
-  
-  .philosophy {
-    grid-template-columns: 1fr;
-  }
-  
-  .philosophy-image {
-    height: 45vh;
-    margin-bottom: 5vh;
-  }
-}
