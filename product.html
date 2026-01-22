@@ -1,321 +1,55 @@
-完整 product.html 专用 style.css
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Formula | Essenza Verda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
 
-/* ========================================
-   ESSENZA VERDA – PRODUCT PAGE 专用样式
-   独立文件，直接替换 assets/css/product.css
-   100% Vercel 兼容，6屏转化流完整实现
-======================================= */
+    <main>
+        <header id="product-hero">
+            <h1>The Formula</h1>
+            <p>Metabolic support rooted in Mediterranean nature.</p>
+        </header>
 
-/* 1. 视觉系统变量 */
-:root {
-  --ev-bg: #F8F7F2;          /* 石灰岩白 */
-  --ev-text: #282828;        /* 深石墨 */
-  --ev-accent: #A5C8D6;      /* 天空蓝 */
+        <section id="product-bridge">
+            <p>"Balance is not a destination, but a rhythm restored."</p>
+        </section>
 
-  --ev-gap-section: 18vh;    /* section 间距 */
-  --ev-gap-paragraph: 7vh;   /* 段落间距 */
-  --ev-max-width: 1100px;    /* 杂志版心 */
-}
+        <section id="product-what">
+            <p>Essenza Verda is a daily ritual designed to support your body's natural metabolic pathways using clean, evidence-based botanicals.</p>
+        </section>
 
-/* 2. 全局基础 */
-* {
-  box-sizing: border-box;
-}
+        <section id="product-ingredients">
+            <h2>Inside the Science</h2>
+            <ul>
+                <li>Citrus Bioflavonoids</li>
+                <li>Saffron Extract (Lepticore®)</li>
+                <li>Chromium Picolinate</li>
+            </ul>
+        </section>
 
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
+        <section id="product-feel">
+            <p>A SLOWER RHYTHM</p>
+            <p>Experience the clarity of a body in sync with its own biology.</p>
+        </section>
 
-body {
-  background-color: var(--ev-bg);
-  color: var(--ev-text);
-  font-family: "Montserrat", system-ui, -apple-system, sans-serif;
-  line-height: 1.8;
-  letter-spacing: 0.02em;
-  overflow-x: hidden;
-}
+        <section id="product-purchase">
+            <h2>Monthly Ritual</h2>
+            <p>$64.00</p>
+            <a href="#" id="subscribe">Subscribe Now</a>
+            <p>Free shipping on all metabolic rituals.</p>
+        </section>
+    </main>
 
-/* 3. Section 版心 + 节奏 */
-section {
-  max-width: var(--ev-max-width);
-  margin: 0 auto;
-  padding-left: 5vw;
-  padding-right: 5vw;
-}
+    <footer>
+        <a href="index.html">Home</a> · 
+        <a href="about.html">About</a> · 
+        <a href="support.html">Support</a>
+    </footer>
 
-p + p {
-  margin-top: var(--ev-gap-paragraph);
-}
-
-/* ========================================
-   6屏转化流样式
-======================================= */
-
-/* 首屏：身份确认（90vh世界感） */
-#product-hero {
-  position: relative;
-  min-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  text-align: left;
-  padding: 12vh 5vw;
-  max-width: none;
-  background: linear-gradient(135deg, 
-              rgba(248,247,242,0.7) 0%, 
-              rgba(248,247,242,0.4) 50%, 
-              transparent 100%),
-              url('../images/product-coast.jpg') center/cover no-repeat;
-  background-size: cover;
-  background-position: center 25%;
-  background-attachment: fixed;
-}
-
-#product-hero h1 {
-  font-family: "Playfair Display", serif;
-  font-size: clamp(2.4rem, 7vw, 3.6rem);
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  margin: 0 0 2vh 0;
-  color: var(--ev-text);
-  max-width: 500px;
-  line-height: 1.1;
-}
-
-#product-hero p {
-  font-size: 1.15rem;
-  opacity: 0.92;
-  margin: 0;
-  max-width: 450px;
-  font-weight: 300;
-}
-
-/* 第二屏：价值锚点（心理桥梁） */
-#product-bridge {
-  padding: 20vh 5vw 18vh;
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-#product-bridge p {
-  font-size: 1.2rem;
-  font-weight: 400;
-  letter-spacing: 0.1em;
-  opacity: 0.88;
-  font-style: italic;
-  padding: 2vh 0;
-}
-
-/* 第三屏：What it is（极克制定义） */
-#product-what {
-  padding: 20vh 5vw;
-  text-align: center;
-  max-width: 750px;
-  margin: 0 auto;
-}
-
-#product-what p {
-  font-size: 1.08rem;
-  line-height: 1.95;
-  opacity: 0.92;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* 第四屏：What’s inside（成分清单） */
-#product-ingredients {
-  padding: 22vh 5vw 20vh;
-  max-width: 650px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-#product-ingredients ul {
-  list-style: none;
-  padding: 0;
-  margin: 6vh 0 0 0;
-}
-
-#product-ingredients li {
-  font-size: 1.02rem;
-  padding: 1.5vh 0;
-  opacity: 0.92;
-  position: relative;
-  border-left: 3px solid var(--ev-accent);
-  padding-left: 3rem;
-  text-align: left;
-  display: block;
-}
-
-#product-ingredients li::before {
-  content: "→";
-  position: absolute;
-  left: 0.3rem;
-  top: 0.1rem;
-  color: var(--ev-accent);
-  font-weight: 500;
-  font-size: 0.9rem;
-}
-
-/* 第五屏：How it feels（情绪闭环） */
-#product-feel {
-  padding: 22vh 5vh 20vh;
-  text-align: center;
-  max-width: 550px;
-  margin: 0 auto;
-}
-
-#product-feel p:first-of-type {
-  font-family: "Playfair Display", serif;
-  font-size: 1.6rem;
-  font-weight: 500;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  margin: 0 0 6vh 0;
-  color: var(--ev-text);
-  line-height: 1.2;
-}
-
-#product-feel p:last-of-type {
-  font-size: 1.08rem;
-  line-height: 1.95;
-  font-style: italic;
-  opacity: 0.92;
-  font-weight: 300;
-}
-
-/* 第六屏：订阅购买（唯一CTA） */
-#product-purchase {
-  max-width: 420px;
-  margin: 25vh auto 20vh;
-  padding: 0 5vw;
-  text-align: center;
-}
-
-#product-purchase h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 1.8rem;
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  margin: 0 0 1.5vh 0;
-  color: var(--ev-text);
-}
-
-#product-purchase p:nth-of-type(1) {
-  font-size: 2.2rem;
-  font-weight: 600;
-  color: var(--ev-accent);
-  margin: 0 0 6vh 0;
-  letter-spacing: -0.02em;
-}
-
-#product-purchase #subscribe {
-  display: inline-block;
-  background: transparent;
-  color: var(--ev-text);
-  border: 2px solid var(--ev-accent);
-  padding: 1.2rem 3rem;
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.98rem;
-  font-weight: 500;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 3vh;
-}
-
-#product-purchase #subscribe:hover {
-  background: var(--ev-accent);
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(165, 200, 214, 0.3);
-}
-
-#product-purchase p:last-of-type {
-  font-size: 0.92rem;
-  opacity: 0.85;
-  margin: 0;
-  font-weight: 300;
-  letter-spacing: 0.04em;
-}
-
-/* Footer */
-footer {
-  max-width: var(--ev-max-width);
-  margin: 16vh auto 10vh;
-  padding: 0 5vw;
-  font-size: 0.88rem;
-  opacity: 0.75;
-  text-align: center;
-}
-
-footer a {
-  color: var(--ev-text);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-footer a:hover {
-  color: var(--ev-accent);
-}
-
-/* ========================================
-   响应式设计
-======================================= */
-
-@media (max-width: 768px) {
-  #product-hero {
-    min-height: 88vh;
-    padding: 16vh 8vw 14vh;
-    background-attachment: scroll;
-  }
-  
-  #product-hero h1 {
-    font-size: 2.3rem;
-    letter-spacing: 0.12em;
-  }
-  
-  #product-bridge,
-  #product-what,
-  #product-ingredients,
-  #product-feel {
-    padding: 16vh 8vw;
-  }
-  
-  #product-purchase {
-    margin: 20vh auto 16vh;
-    padding: 0 8vw;
-    max-width: 380px;
-  }
-  
-  #product-purchase p:nth-of-type(1) {
-    font-size: 1.9rem;
-  }
-  
-  #product-ingredients li {
-    padding-left: 2.5rem;
-    font-size: 0.98rem;
-  }
-}
-
-@media (max-width: 480px) {
-  #product-hero h1 {
-    font-size: 1.9rem;
-  }
-  
-  #product-feel p:first-of-type {
-    font-size: 1.3rem;
-    letter-spacing: 0.15em;
-  }
-}
-
+</body>
+</html>
