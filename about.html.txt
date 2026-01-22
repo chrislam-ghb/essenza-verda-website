@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About — Essenza Verda</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+
+<!-- ABOUT HERO：灯塔隐喻（80vh世界图） -->
+<section class="about-hero">
+  <img src="assets/images/about-lighthouse.jpg" alt="Essenza Verda - Mediterranean Lighthouse Guiding Rhythm"/>
+</section>
+
+<!-- PHILOSOPHY：品牌宣言 -->
+<section class="about-content">
+  <h1>Our Philosophy</h1>
+  
+  <p>
+    Essenza Verda is not about <em>transformation</em>.
+    It is about <em>returning</em>.
+  </p>
+
+  <p>
+    We believe modern health lost its sense of rhythm.
+    Our work is to restore it — <em>gently</em>, transparently, 
+    and with respect for the body.
+  </p>
+
+  <p>
+    From the Mediterranean, back to balance.
+  </p>
+</section>
+
+<!-- FOOTER：统一导航 -->
+<footer>
+  <a href="index.html">Home</a> · 
+  <a href="product.html">The Formula</a> · 
+  <a href="faq.html">FAQ</a> · 
+  <a href="support.html">Support</a>
+</footer>
+
+</body>
+</html>

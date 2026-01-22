@@ -1,0 +1,219 @@
+/* ========================================
+   ESSENZA VERDA – 完美品牌视觉系统 (V2.0)
+   已锁定：石灰岩白背景 | 18vh 呼吸节奏 | 沉浸式影像
+======================================= */
+
+/* 1. 视觉系统变量 */
+:root {
+  --ev-bg: #F8F7F2;          /* 石灰岩白：温暖高级 */
+  --ev-text: #282828;        /* 深石墨：柔和阅读 */
+  --ev-accent: #A5C8D6;      /* 天空蓝：点睛之笔 */
+
+  --ev-gap-section: 18vh;    /* 屏与屏的停顿感 */
+  --ev-gap-paragraph: 7vh;   /* 段落间的呼吸感 */
+  --ev-max-width: 1100px;    /* 杂志版心感 */
+  
+  /* 统一滤镜：注入地中海阳光感 */
+  --ev-filter: saturate(0.85) sepia(0.08);
+}
+
+/* 2. 全局基础重置 */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: var(--ev-bg);
+}
+
+body {
+  color: var(--ev-text);
+  font-family: "Montserrat", system-ui, -apple-system, sans-serif;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 3. 核心容器系统 */
+main, section, header, footer {
+  max-width: var(--ev-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+/* 强制全站呼吸节奏 */
+section {
+  padding-top: var(--ev-gap-section);
+  padding-bottom: var(--ev-gap-section);
+}
+
+p + p {
+  margin-top: var(--ev-gap-paragraph);
+}
+
+/* ========================================
+   HOMEPAGE - 叙事空间
+======================================= */
+
+/* Hero：90vh 沉浸式首屏 */
+.hero {
+  position: relative;
+  min-height: 90vh;
+  width: 100vw;
+  max-width: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 8vh 5vw;
+  background: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.05)), 
+              url('hero-bg.jpg') center/cover no-repeat;
+  filter: var(--ev-filter);
+  margin-bottom: var(--ev-gap-section);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 520px;
+  color: var(--ev-text);
+}
+
+.hero-content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 2vh;
+}
+
+/* 转场大图：Philosophy 承接 */
+.hero-bridge {
+  max-width: none;
+  padding: 0;
+  margin: var(--ev-gap-section) 0;
+  width: 100vw;
+  height: 70vh;
+  background: url('hero-second.jpg') center/cover no-repeat;
+  filter: var(--ev-filter);
+}
+
+/* Philosophy：图文并茂的品牌哲学 */
+.philosophy {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  column-gap: 6vw;
+  align-items: center;
+}
+
+.philosophy-image {
+  width: 100%;
+  height: 60vh;
+  background: url('philosophy.jpg') center/cover no-repeat;
+  filter: var(--ev-filter);
+}
+
+.philosophy-text h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 3vh;
+}
+
+/* ========================================
+   PRODUCT - DTC 高级感
+======================================= */
+
+#product-hero {
+  position: relative;
+  min-height: 90vh;
+  width: 100vw;
+  max-width: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 12vh 5vw;
+  /* 重点：渐变叠加层确保文字清晰 */
+  background: linear-gradient(135deg, rgba(248,247,242,0.8) 0%, transparent 60%),
+              url('product-main.jpg') center/cover no-repeat;
+}
+
+#product-ingredients li {
+  border-left: 2px solid var(--ev-accent);
+  padding: 1.2vh 0 1.2vh 2.5rem;
+  margin-bottom: 1vh;
+  list-style: none;
+}
+
+#product-purchase #subscribe {
+  border: 1.5px solid var(--ev-text);
+  padding: 1.2rem 3rem;
+  letter-spacing: 0.2em;
+  transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#product-purchase #subscribe:hover {
+  background: var(--ev-text);
+  color: var(--ev-bg);
+}
+
+/* ========================================
+   ABOUT - 品牌溯源
+======================================= */
+
+.about-hero {
+  max-width: none;
+  width: 100vw;
+  height: 80vh;
+  background: url('about-hero.jpg') center/cover no-repeat;
+  filter: var(--ev-filter);
+}
+
+.about-content p:last-of-type {
+  font-style: italic;
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  margin-top: 10vh;
+  text-align: center;
+}
+
+/* ========================================
+   通用组件与响应式
+======================================= */
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  text-decoration: none;
+  color: var(--ev-text);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(40, 40, 40, 0.2);
+}
+
+@media (max-width: 768px) {
+  section {
+    padding-top: 12vh;
+    padding-bottom: 12vh;
+  }
+  
+  .philosophy {
+    grid-template-columns: 1fr;
+  }
+  
+  .philosophy-image {
+    height: 45vh;
+    margin-bottom: 5vh;
+  }
+}
